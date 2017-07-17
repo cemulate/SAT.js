@@ -394,3 +394,5 @@ function satBacktrack(state, reason)
 
     return nogood;
 }
+
+export default satSolve;
