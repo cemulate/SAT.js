@@ -1,0 +1,20 @@
+{
+  "name": "boolean-sat",
+  "version": "1.0.0",
+  "description": "A simple JavaScript SAT solver",
+  "main": "boolean-sat.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cemulate/SAT.js.git"
+  },
+  "keywords": [
+    "SAT",
+    "boolean satisfiability"
+  ],
+  "author": "Gregory J. Duck",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/cemulate/SAT.js/issues"
+  },
+  "homepage": "https://github.com/cemulate/SAT.js#readme"
+}

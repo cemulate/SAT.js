@@ -142,11 +142,11 @@ function satSelectLiteral(state)
         if (i >= state.vars.length)
             i = 1;
         if (i == i0)
-            return 0; 
+            return 0;
     }
 
     var literal = (Math.random() < 0.5? -i: i);
-    return literal; 
+    return literal;
 }
 
 /*
@@ -237,7 +237,7 @@ function satUnitPropagate(state, literal, reason)
                 for (j = 2; j < clause.length &&
                         literalIsFalse(state, clause[j]); j++)
                     ;
- 
+
                 if (j >= clause.length)
                 {
                     // All other literals a false; use the other watch:
