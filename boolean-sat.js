@@ -34,6 +34,10 @@ function State()
     this.tlevel = 0;
 }
 
+State.prototype.getVariableAssignment = function() {
+    return this.vars.map(v => (v != null) ? (!(v.set && v.sign != (v < 0))) : null);
+}
+
 /*
  * Variable constructor.
  */
@@ -184,7 +188,7 @@ function satSolve(size, clauses)
         if (literal == 0)
         {
             // All variables are now set; and no conflicts; therefore SAT
-            return true;
+            return state.getVariableAssignment();
         }
         if (!satUnitPropagate(state, literal, null))
         {
@@ -193,7 +197,7 @@ function satSolve(size, clauses)
         }
     }
 
-    return true;
+    return state.getVariableAssignment();
 }
 
 /*
